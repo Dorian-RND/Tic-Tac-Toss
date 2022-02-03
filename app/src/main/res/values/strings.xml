@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Tic-Tac-Toss</string>
-    <string name=""></string>
+    <string name="myTest0" id="@+id/myTest0">This is a test</string>
 </resources>

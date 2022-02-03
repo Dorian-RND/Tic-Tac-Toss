@@ -7,11 +7,11 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/myTest0"
         android:layout_width="267dp"
         android:layout_height="282dp"
         android:background="#DB9DE6"
-        android:text="C'est un test"
+        android:text="@string/myTest0"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
