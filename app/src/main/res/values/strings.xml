@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Tic-Tac-Toss</string>
     <string name="myTest0" id="@+id/myTest0">This is a test</string>
+    <string name="btnTicTacToe_1p" id="@+id/btnTicTacToss_1p">Tic-Tac-Toe 1P</string>
+    <string name="btnTicTacToe_2p" id="@+id/btnTicTacToss_2p">Tic-Tac-Toe 2P</string>
+
 </resources>
