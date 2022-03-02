@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             public void onSwipeLeft(){
                 Intent goPage2 = new Intent(getApplicationContext(), MainActivity2.class);
                 startActivity(goPage2);
-                onPause();
+                finish();
             }
         });
     }

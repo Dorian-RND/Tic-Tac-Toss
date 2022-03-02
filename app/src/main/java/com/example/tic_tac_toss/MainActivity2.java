@@ -36,7 +36,7 @@ public class MainActivity2 extends AppCompatActivity {
             public void onSwipeRight(){
                 Intent goPage1 = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(goPage1);
-                onStop();
+                finish();
             }
         });
 
