@@ -3,6 +3,8 @@ package com.example.tic_tac_toss;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -17,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
     LinearLayout layout;
 
+    private MainActivity activity;
+
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -28,6 +32,17 @@ public class MainActivity extends AppCompatActivity {
         this.play1pMed = findViewById(R.id.btnTicTacToss_1p_Medium);
         this.play2p = findViewById(R.id.btnTicTacToss_2p);
         this.layout = findViewById(R.id.page1Layout);
+        this.activity = this;
+
+        AlertDialog.Builder myPopup = new AlertDialog.Builder(activity);
+        myPopup.setTitle("Salut !");
+        myPopup.setMessage("Ceci est un tuto");
+        myPopup.setPositiveButton("GOT IT !", new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialogInterface, int i){
+                Toast.makeText(getApplicationContext(), "C'est parti !", Toast.LENGTH_SHORT).show();
+            }
+        });
+        myPopup.show();
 
         play1pEasy.setOnClickListener(new View.OnClickListener() {
             @Override

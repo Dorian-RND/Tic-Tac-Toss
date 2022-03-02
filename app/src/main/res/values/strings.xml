@@ -7,8 +7,9 @@
     <string name="btnTossACoin" id="@+id/btnTossACoin">Toss</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="TicTacToss" id="@+id/TicTacToss">Tic-Tac-Toss</string>
+    <string name="TicTacToss" id="@+id/TicTacToss">Tic-Tac-Toe</string>
     <string name="TossACoin" id="@+id/TossACoin">Toss</string>
+    <string name="Credits" id="@+id/Credits">Crédits</string>
 
 
 </resources>
