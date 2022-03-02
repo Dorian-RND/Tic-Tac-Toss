@@ -4,6 +4,7 @@
     <string name="btnTicTacToe_1p_Easy" id="@+id/btnTicTacToss_1p_Easy">1 Player - Easy</string>
     <string name="btnTicTacToe_1p_Medium" id="@+id/btnTicTacToss_1p_Medium">1 Player - Medium</string>
     <string name="btnTicTacToe_2p" id="@+id/btnTicTacToss_2p">Player vs Player</string>
+    <string name="btnToss" id="@+id/btnToss">Toss a Coin</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="TicTacToss" id="@+id/TicTacToss">Tic-Tac-Toss</string>

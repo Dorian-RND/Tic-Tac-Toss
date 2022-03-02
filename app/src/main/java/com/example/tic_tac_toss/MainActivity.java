@@ -2,6 +2,7 @@ package com.example.tic_tac_toss;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,14 +14,19 @@ public class MainActivity extends AppCompatActivity {
     private Button play2p;
     private Button play1pMed;
 
+    LinearLayout layout;
+
+
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.play1pEasy = (Button)findViewById(R.id.btnTicTacToss_1p_Easy);
-        this.play1pMed = (Button)findViewById(R.id.btnTicTacToss_1p_Medium);
-        this.play2p = (Button)findViewById(R.id.btnTicTacToss_2p);
+        this.play1pEasy = findViewById(R.id.btnTicTacToss_1p_Easy);
+        this.play1pMed = findViewById(R.id.btnTicTacToss_1p_Medium);
+        this.play2p = findViewById(R.id.btnTicTacToss_2p);
+        this.layout = findViewById(R.id.page1Layout);
 
         play1pEasy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +55,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        layout.setOnTouchListener(new OnSwipeTouchListener(MainActivity.this){
+            @Override
+            public void onSwipeLeft(){
+                Intent goPage2 = new Intent(getApplicationContext(), MainActivity2.class);
+                startActivity(goPage2);
+                onPause();
+            }
+        });
     }
 
 
