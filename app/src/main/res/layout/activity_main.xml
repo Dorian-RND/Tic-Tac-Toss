@@ -79,7 +79,7 @@
                     android:text="@string/btnTicTacToe_2p"
                     android:layout_marginTop="75dp"
                     android:layout_gravity="center"
-                    android:backgroundTint="@color/black"/>
+                    android:background="@drawable/arrondi_btn"/>
             </LinearLayout>
 
             <LinearLayout
@@ -95,7 +95,7 @@
                     android:text="@string/btnTicTacToe_1p_Easy"
                     android:layout_marginTop="20dp"
                     android:layout_gravity="center"
-                    android:backgroundTint="@color/black" />
+                    android:background="@drawable/arrondi_btn" />
             </LinearLayout>
 
 
@@ -112,7 +112,7 @@
                     android:text="@string/btnTicTacToe_1p_Medium"
                     android:layout_marginTop="45dp"
                     android:layout_gravity="center"
-                    android:backgroundTint="@color/black" />
+                    android:background="@drawable/arrondi_btn" />
             </LinearLayout>
 
         </LinearLayout>
@@ -123,18 +123,18 @@
             android:orientation="horizontal"
             android:layout_weight="1">
 
-        <LinearLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:layout_weight="0.60">
-        </LinearLayout>
+            </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight="0.40">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="0.40">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -185,12 +185,12 @@
             </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_weight="0.60">
-        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="0.60">
+            </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>

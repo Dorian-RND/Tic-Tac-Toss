@@ -19,7 +19,7 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        this.tossACoin = findViewById(R.id.btnToss);
+        this.tossACoin = findViewById(R.id.btnTossACoin);
         this.layout = findViewById(R.id.page2Layout);
 
         tossACoin.setOnClickListener(new View.OnClickListener() {
