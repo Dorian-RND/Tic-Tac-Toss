@@ -7,7 +7,6 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.*;
 
@@ -74,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         layout.setOnTouchListener(new OnSwipeTouchListener(MainActivity.this){
             @Override
             public void onSwipeLeft(){
-                Intent goPage2 = new Intent(getApplicationContext(), MainActivity2.class);
+                Intent goPage2 = new Intent(getApplicationContext(), TossACoinActivity.class);
                 startActivity(goPage2);
                 finish();
             }
