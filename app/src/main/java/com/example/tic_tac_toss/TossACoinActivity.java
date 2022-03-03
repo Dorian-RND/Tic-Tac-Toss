@@ -36,13 +36,13 @@ public class TossACoinActivity extends AppCompatActivity {
             public void onSwipeRight(){
                 Intent goPage1 = new Intent(getApplicationContext(), TicTacToeActivity.class);
                 startActivity(goPage1);
-                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                 finish();
             }
             public void onSwipeLeft(){
                 Intent goPage3 = new Intent(getApplicationContext(), CreditsActivity.class);
                 startActivity(goPage3);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
             }
         });
