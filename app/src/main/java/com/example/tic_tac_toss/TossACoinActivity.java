@@ -6,7 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.*;
+import android.net.Uri;
 
 public class TossACoinActivity extends AppCompatActivity {
 
@@ -22,12 +23,14 @@ public class TossACoinActivity extends AppCompatActivity {
         this.tossACoin = findViewById(R.id.btnTossACoin);
         this.layout = findViewById(R.id.page2Layout);
 
+        // initiate a video view
+        VideoView simpleVideoView = (VideoView) findViewById(R.id.testVideoView);
+        simpleVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.roll_the_dice));
+
         tossACoin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent tossActivity = new Intent(getApplicationContext(), TicTacToe1pEasyActivity.class);
-                startActivity(tossActivity);
-                onPause();
+                simpleVideoView.start(); // start a video
             }
         });
 
@@ -48,4 +51,5 @@ public class TossACoinActivity extends AppCompatActivity {
         });
 
     }
+
 }
