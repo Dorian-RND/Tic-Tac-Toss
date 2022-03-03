@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
             public void onSwipeLeft(){
                 Intent goPage2 = new Intent(getApplicationContext(), TossACoinActivity.class);
                 startActivity(goPage2);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
                 finish();
             }
         });
