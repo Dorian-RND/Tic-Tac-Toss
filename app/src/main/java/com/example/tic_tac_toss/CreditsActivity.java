@@ -19,7 +19,7 @@ public class CreditsActivity extends AppCompatActivity {
         layout.setOnTouchListener(new OnSwipeTouchListener(CreditsActivity.this){
             @Override
             public void onSwipeRight(){
-                Intent goPage2 = new Intent(getApplicationContext(), MainActivity2.class);
+                Intent goPage2 = new Intent(getApplicationContext(), TossACoinActivity.class);
                 startActivity(goPage2);
                 finish();
             }
