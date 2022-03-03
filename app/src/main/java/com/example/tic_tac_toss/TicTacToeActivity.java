@@ -37,6 +37,7 @@ public class TicTacToeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent player1Activity = new Intent(getApplicationContext(), TicTacToe1pEasyActivity.class);
                 startActivity(player1Activity);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
                 onPause();
             }
         });

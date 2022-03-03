@@ -21,6 +21,7 @@ public class CreditsActivity extends AppCompatActivity {
             public void onSwipeRight(){
                 Intent goPage2 = new Intent(getApplicationContext(), TossACoinActivity.class);
                 startActivity(goPage2);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
                 finish();
             }
         });
