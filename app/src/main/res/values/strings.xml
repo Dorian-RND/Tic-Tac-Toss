@@ -10,6 +10,8 @@
     <string name="TicTacToss" id="@+id/TicTacToss">Tic-Tac-Toe</string>
     <string name="TossACoin" id="@+id/TossACoin">Toss</string>
     <string name="Credits" id="@+id/Credits">Crédits</string>
+    <string name="TitrePopUp" id="@+id/TitrePopUp">WELCOME !</string>
+    <string name="btnPopUp" id="@+id/btnPopUp">GOT IT !</string>
 
 
 </resources>

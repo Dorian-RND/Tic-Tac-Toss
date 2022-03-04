@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
         this.activity = this;
 
         AlertDialog.Builder myPopup = new AlertDialog.Builder(activity);
-        myPopup.setTitle("Salut !");
-        myPopup.setMessage("Ceci est un tuto");
-        myPopup.setPositiveButton("GOT IT !", new DialogInterface.OnClickListener(){
+        myPopup.setTitle(getString(R.string.TitrePopUp));
+        myPopup.setMessage(getString(R.string.TitrePopUp));
+        myPopup.setPositiveButton(getString(R.string.btnPopUp), new DialogInterface.OnClickListener(){
             public void onClick(DialogInterface dialogInterface, int i){
                 Toast.makeText(getApplicationContext(), "C'est parti !", Toast.LENGTH_SHORT).show();
             }
