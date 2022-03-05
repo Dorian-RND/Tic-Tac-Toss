@@ -65,7 +65,7 @@
             android:layout_height="0dp"
             android:orientation="vertical"
             android:layout_weight="5"
-            android:background="@color/blue_pastel">
+            android:background="@color/pastel_blue">
 
             <GridLayout
                 android:layout_width="match_parent"
@@ -90,41 +90,49 @@
                 <ImageView
                     android:layout_columnWeight="2"
                     android:layout_rowWeight="2"
+                    android:id="@+id/img_btn_2"
                     android:background="@color/lighter_black"/>
 
                 <ImageView
                     android:layout_columnWeight="2"
                     android:layout_rowWeight="2"
+                    android:id="@+id/img_btn_3"
                     android:background="@color/lighter_black"/>
 
                 <ImageView
                     android:layout_columnWeight="2"
                     android:layout_rowWeight="2"
+                    android:id="@+id/img_btn_4"
                     android:background="@color/lighter_black"/>
 
                 <ImageView
                     android:layout_columnWeight="2"
                     android:layout_rowWeight="2"
+                    android:id="@+id/img_btn_5"
                     android:background="@color/lighter_black"/>
 
                 <ImageView
                     android:layout_columnWeight="2"
                     android:layout_rowWeight="2"
+                    android:id="@+id/img_btn_6"
                     android:background="@color/lighter_black"/>
 
                 <ImageView
                     android:layout_columnWeight="2"
                     android:layout_rowWeight="2"
+                    android:id="@+id/img_btn_7"
                     android:background="@color/lighter_black"/>
 
                 <ImageView
                     android:layout_columnWeight="2"
                     android:layout_rowWeight="2"
+                    android:id="@+id/img_btn_8"
                     android:background="@color/lighter_black"/>
 
                 <ImageView
                     android:layout_columnWeight="2"
                     android:layout_rowWeight="2"
+                    android:id="@+id/img_btn_9"
                     android:background="@color/lighter_black"/>
 
             </GridLayout>
