@@ -2,25 +2,134 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/play_tic_tac_toe"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".TicTacToe1pEasyActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="193dp"
-        android:layout_height="365dp"
-        android:layout_marginStart="109dp"
-        android:layout_marginTop="171dp"
-        android:layout_marginEnd="109dp"
-        android:layout_marginBottom="195dp"
-        android:background="#5AF11A"
-        android:text="c'est ici qu'on va jouer Billy"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        android:textStyle="bold"
+    <LinearLayout
+        android:layout_width="415dp"
+        android:layout_height="730dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:weightSum="6"
+        android:id="@+id/page1Layout">
+
+        <LinearLayout
+            android:baselineAligned="false"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@color/black">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="0.70">
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="0.4">
+
+                <TextView
+                    android:id="@+id/Titre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TicTacToss"
+                    android:gravity="center"
+                    android:layout_marginTop="33dp"
+                    android:textSize="40dp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="0.70">
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="5"
+            android:background="@color/blue_pastel">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:rowCount="3"
+                android:columnCount="3"
+                android:layout_gravity="center"
+                android:id="@+id/gridlayout1"
+                android:useDefaultMargins="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="60dp"
+                android:layout_marginTop="40dp">
+
+                <ImageView
+                    android:layout_columnWeight="2"
+                    android:layout_rowWeight="2"
+                    android:background="@color/lighter_black"
+                    android:id="@+id/img_btn_1"
+                    android:src="@color/lighter_black"/>
+
+                <ImageView
+                    android:layout_columnWeight="2"
+                    android:layout_rowWeight="2"
+                    android:background="@color/lighter_black"/>
+
+                <ImageView
+                    android:layout_columnWeight="2"
+                    android:layout_rowWeight="2"
+                    android:background="@color/lighter_black"/>
+
+                <ImageView
+                    android:layout_columnWeight="2"
+                    android:layout_rowWeight="2"
+                    android:background="@color/lighter_black"/>
+
+                <ImageView
+                    android:layout_columnWeight="2"
+                    android:layout_rowWeight="2"
+                    android:background="@color/lighter_black"/>
+
+                <ImageView
+                    android:layout_columnWeight="2"
+                    android:layout_rowWeight="2"
+                    android:background="@color/lighter_black"/>
+
+                <ImageView
+                    android:layout_columnWeight="2"
+                    android:layout_rowWeight="2"
+                    android:background="@color/lighter_black"/>
+
+                <ImageView
+                    android:layout_columnWeight="2"
+                    android:layout_rowWeight="2"
+                    android:background="@color/lighter_black"/>
+
+                <ImageView
+                    android:layout_columnWeight="2"
+                    android:layout_rowWeight="2"
+                    android:background="@color/lighter_black"/>
+
+            </GridLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
