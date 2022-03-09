@@ -7,8 +7,10 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.*;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         AlertDialog.Builder myPopup = new AlertDialog.Builder(activity);
         myPopup.setTitle(getString(R.string.TitrePopUp));
-        myPopup.setMessage(getString(R.string.TitrePopUp));
+        myPopup.setMessage(getString(R.string.TextePopUp));
         myPopup.setPositiveButton(getString(R.string.btnPopUp), new DialogInterface.OnClickListener(){
             public void onClick(DialogInterface dialogInterface, int i){
                 Toast.makeText(getApplicationContext(), "C'est parti !", Toast.LENGTH_SHORT).show();
