@@ -2,18 +2,20 @@ package com.example.tic_tac_toss;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.*;
 import android.net.Uri;
+import java.util.Random;
 
 public class TossACoinActivity extends AppCompatActivity {
 
     Button tossACoin;
-
     LinearLayout layout;
+    VideoView simpleVideoView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +26,10 @@ public class TossACoinActivity extends AppCompatActivity {
         this.layout = findViewById(R.id.page2Layout);
 
         // initiate a video view
-        VideoView simpleVideoView = (VideoView) findViewById(R.id.testVideoView);
-        simpleVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.roll_the_dice));
+        this.simpleVideoView = (VideoView) findViewById(R.id.testVideoView);
 
-        tossACoin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                simpleVideoView.start(); // start a video
-            }
-        });
+
+        tossACoin.setOnClickListener(view -> launchToss());
 
         layout.setOnTouchListener(new OnSwipeTouchListener(TossACoinActivity.this){
             @Override
@@ -49,6 +46,23 @@ public class TossACoinActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+    }
+
+    public void launchToss(){
+
+        Random r = new Random();
+        int nbRand = r.nextInt(3);
+
+        switch (nbRand) {
+            case 0 : this.simpleVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.roll_the_dice));
+                break;
+            case 1 : this.simpleVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.dice_1));
+                break;
+            default : this.simpleVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.dice_2));
+                break;
+        }
+        this.simpleVideoView.start(); // start a video
 
     }
 

@@ -6,12 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import java.util.Arrays;
 
 
 public class TicTacToe1pEasyActivity extends AppCompatActivity {
 
     int player1 = 1;
-    int player2 = 2;
+    int npc = 2;
+    private int[] grille = new int[9];
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +51,7 @@ public class TicTacToe1pEasyActivity extends AppCompatActivity {
                 else {
                     if (case1.getValeur() == player1) {
                         btn1.setImageResource(R.drawable.cross);
-                        case1.setValeur(player2);
+                        case1.setValeur(npc);
                     }
                     else {
                         btn1.setImageResource(R.drawable.circle);
@@ -69,7 +72,7 @@ public class TicTacToe1pEasyActivity extends AppCompatActivity {
                 else {
                     if (case2.getValeur() == player1) {
                         btn2.setImageResource(R.drawable.cross);
-                        case2.setValeur(player2);
+                        case2.setValeur(npc);
                     }
                     else {
                         btn2.setImageResource(R.drawable.circle);
@@ -90,7 +93,7 @@ public class TicTacToe1pEasyActivity extends AppCompatActivity {
                 else {
                     if (case3.getValeur() == player1) {
                         btn3.setImageResource(R.drawable.cross);
-                        case3.setValeur(player2);
+                        case3.setValeur(npc);
                     }
                     else {
                         btn3.setImageResource(R.drawable.circle);
@@ -111,7 +114,7 @@ public class TicTacToe1pEasyActivity extends AppCompatActivity {
                 else {
                     if (case4.getValeur() == player1) {
                         btn4.setImageResource(R.drawable.cross);
-                        case4.setValeur(player2);
+                        case4.setValeur(npc);
                     }
                     else {
                         btn4.setImageResource(R.drawable.circle);
@@ -132,7 +135,7 @@ public class TicTacToe1pEasyActivity extends AppCompatActivity {
                 else {
                     if (case5.getValeur() == player1) {
                         btn5.setImageResource(R.drawable.cross);
-                        case5.setValeur(player2);
+                        case5.setValeur(npc);
                     }
                     else {
                         btn5.setImageResource(R.drawable.circle);
@@ -153,7 +156,7 @@ public class TicTacToe1pEasyActivity extends AppCompatActivity {
                 else {
                     if (case6.getValeur() == player1) {
                         btn6.setImageResource(R.drawable.cross);
-                        case6.setValeur(player2);
+                        case6.setValeur(npc);
                     }
                     else {
                         btn6.setImageResource(R.drawable.circle);
@@ -174,7 +177,7 @@ public class TicTacToe1pEasyActivity extends AppCompatActivity {
                 else {
                     if (case7.getValeur() == player1) {
                         btn7.setImageResource(R.drawable.cross);
-                        case7.setValeur(player2);
+                        case7.setValeur(npc);
                     }
                     else {
                         btn7.setImageResource(R.drawable.circle);
@@ -195,7 +198,7 @@ public class TicTacToe1pEasyActivity extends AppCompatActivity {
                 else {
                     if (case8.getValeur() == player1) {
                         btn8.setImageResource(R.drawable.cross);
-                        case8.setValeur(player2);
+                        case8.setValeur(npc);
                     }
                     else {
                         btn8.setImageResource(R.drawable.circle);
@@ -216,7 +219,7 @@ public class TicTacToe1pEasyActivity extends AppCompatActivity {
                 else {
                     if (case9.getValeur() == player1) {
                         btn9.setImageResource(R.drawable.cross);
-                        case9.setValeur(player2);
+                        case9.setValeur(npc);
                     }
                     else {
                         btn9.setImageResource(R.drawable.circle);
@@ -226,4 +229,5 @@ public class TicTacToe1pEasyActivity extends AppCompatActivity {
             }
         });
     }
+
 }

@@ -13,6 +13,8 @@
     <string name="TitrePopUp" id="@+id/TitrePopUp">WELCOME !</string>
     <string name="btnPopUp" id="@+id/btnPopUp">GOT IT !</string>
     <string name="TextePopUp" id="@+id/TextePopUp">\nThis application features a Tic-Tac-Toe and a Toss a coin.\n\nThe navigation is done by swiping left and right.\n</string>
-
+    <string name="result_txt" id="@+id/txtResult">RESULT </string>
+    <string name="toss_result_heads" id="@+id/tossHeads">Heads ! </string>
+    <string name="toss_result_tails" id="@+id/tossTails">Tails ! </string>
 
 </resources>
