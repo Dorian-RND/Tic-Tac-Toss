@@ -9,18 +9,23 @@
         <entry key="..\:/Users/clem7/Documents/M1 INFO/semestre 2/Android/Tic-Tac-Toss/app/src/main/res/layout/pop_up_template.xml" value="0.13496376811594202" />
         <entry key="..\:/Users/clem7/Documents/M1 INFO/semestre 2/Android/Tic-Tac-Toss/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/clem7/Documents/M1 INFO/semestre 2/Android/Tic-Tac-Toss/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.257" />
         <entry key="app/src/main/res/drawable/arrondi.xml" value="0.264" />
         <entry key="app/src/main/res/drawable/arrondi_btn.xml" value="0.264" />
         <entry key="app/src/main/res/drawable/circle.xml" value="0.29" />
         <entry key="app/src/main/res/drawable/cross.xml" value="0.29" />
+        <entry key="app/src/main/res/drawable/customborder.xml" value="0.257" />
+        <entry key="app/src/main/res/drawable/customborderToss.xml" value="0.257" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.264" />
+        <entry key="app/src/main/res/layout/activity_credits.xml" value="0.22249450683593752" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.15520833333333334" />
+        <entry key="app/src/main/res/layout/activity_tic_tac_toe.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_tic_tac_toe1p.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/layout/activity_tic_tac_toe1p_easy.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/layout/activity_tic_tac_toe1p_medium.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/layout/activity_tic_tac_toe2p.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/activity_toss_a_coin.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_toss_a_coin.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_toss_acoin.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.15520833333333334" />
       </map>
