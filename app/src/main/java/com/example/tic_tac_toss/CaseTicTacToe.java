@@ -11,7 +11,7 @@ public class CaseTicTacToe {
     }
 
     public boolean isEmpty() {
-        return empty;
+        return (valeur == 0);
     }
 
     public void setNotEmpty (){

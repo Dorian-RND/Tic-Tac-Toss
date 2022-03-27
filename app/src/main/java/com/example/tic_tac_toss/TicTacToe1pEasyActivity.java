@@ -2,232 +2,93 @@ package com.example.tic_tac_toss;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
-import java.util.Arrays;
+
 
 
 public class TicTacToe1pEasyActivity extends AppCompatActivity {
 
-    int player1 = 1;
-    int npc = 2;
-    private int[] grille = new int[9];
+    private TicTacToe1pEasyActivity activity;
+    protected Jeu1p jeu = new Jeu1p();
+    protected CaseTicTacToe case1;
+    protected CaseTicTacToe case2;
+    protected CaseTicTacToe case3;
+    protected CaseTicTacToe case4;
+    protected CaseTicTacToe case5;
+    protected CaseTicTacToe case6;
+    protected CaseTicTacToe case7;
+    protected CaseTicTacToe case8;
+    protected CaseTicTacToe case9;
 
+    protected ImageView btn1;
+    protected ImageView btn2;
+    protected ImageView btn3;
+    protected ImageView btn4;
+    protected ImageView btn5;
+    protected ImageView btn6;
+    protected ImageView btn7;
+    protected ImageView btn8;
+    protected ImageView btn9;
+
+    protected int cpt = 0;
+    protected int tour = 1;
+
+    CaseTicTacToe[][] listCase = {{case1, case2, case3}, {case4, case5, case6}, {case7, case8, case9}};
+    ImageView[][] listBtn = {{btn1, btn2, btn3}, {btn4, btn5, btn6}, {btn7, btn8, btn9}};
+
+
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tic_tac_toe1p_easy);
+        setContentView(R.layout.activity_tic_tac_toe2p);
 
-        CaseTicTacToe case1 = new CaseTicTacToe();
-        CaseTicTacToe case2 = new CaseTicTacToe();
-        CaseTicTacToe case3 = new CaseTicTacToe();
-        CaseTicTacToe case4 = new CaseTicTacToe();
-        CaseTicTacToe case5 = new CaseTicTacToe();
-        CaseTicTacToe case6 = new CaseTicTacToe();
-        CaseTicTacToe case7 = new CaseTicTacToe();
-        CaseTicTacToe case8 = new CaseTicTacToe();
-        CaseTicTacToe case9 = new CaseTicTacToe();
-
-        ImageView btn1 = findViewById(R.id.img_btn_1);
-        ImageView btn2 = findViewById(R.id.img_btn_2);
-        ImageView btn3 = findViewById(R.id.img_btn_3);
-        ImageView btn4 = findViewById(R.id.img_btn_4);
-        ImageView btn5 = findViewById(R.id.img_btn_5);
-        ImageView btn6 = findViewById(R.id.img_btn_6);
-        ImageView btn7 = findViewById(R.id.img_btn_7);
-        ImageView btn8 = findViewById(R.id.img_btn_8);
-        ImageView btn9 = findViewById(R.id.img_btn_9);
-
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (case1.isEmpty()){
-                    btn1.setImageResource(R.drawable.cross);
-                    case1.setNotEmpty();
-                    case1.setValeur(player1);
-                }
-                else {
-                    if (case1.getValeur() == player1) {
-                        btn1.setImageResource(R.drawable.cross);
-                        case1.setValeur(npc);
-                    }
-                    else {
-                        btn1.setImageResource(R.drawable.circle);
-                        case1.setValeur(player1);
-                    }
-                }
+        for(int i=0; i<3; i++){
+            for(int j=0; j<3; j++){
+                listCase[i][j] = new CaseTicTacToe();
             }
-        });
+        }
 
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (case2.isEmpty()){
-                    btn2.setImageResource(R.drawable.cross);
-                    case2.setNotEmpty();
-                    case2.setValeur(player1);
-                }
-                else {
-                    if (case2.getValeur() == player1) {
-                        btn2.setImageResource(R.drawable.cross);
-                        case2.setValeur(npc);
-                    }
-                    else {
-                        btn2.setImageResource(R.drawable.circle);
-                        case2.setValeur(player1);
-                    }
-                }
-            }
-        });
+        listBtn[0][0] = findViewById(R.id.img_btn_1);
+        listBtn[0][1] = findViewById(R.id.img_btn_2);
+        listBtn[0][2] = findViewById(R.id.img_btn_3);
+        listBtn[1][0] = findViewById(R.id.img_btn_4);
+        listBtn[1][1] = findViewById(R.id.img_btn_5);
+        listBtn[1][2] = findViewById(R.id.img_btn_6);
+        listBtn[2][0] = findViewById(R.id.img_btn_7);
+        listBtn[2][1] = findViewById(R.id.img_btn_8);
+        listBtn[2][2] = findViewById(R.id.img_btn_9);
 
-        btn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (case3.isEmpty()){
-                    btn3.setImageResource(R.drawable.cross);
-                    case3.setNotEmpty();
-                    case3.setValeur(player1);
-                }
-                else {
-                    if (case3.getValeur() == player1) {
-                        btn3.setImageResource(R.drawable.cross);
-                        case3.setValeur(npc);
-                    }
-                    else {
-                        btn3.setImageResource(R.drawable.circle);
-                        case3.setValeur(player1);
-                    }
-                }
-            }
-        });
+        this.activity = this;
 
-        btn4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (case4.isEmpty()){
-                    btn4.setImageResource(R.drawable.cross);
-                    case4.setNotEmpty();
-                    case4.setValeur(player1);
-                }
-                else {
-                    if (case4.getValeur() == player1) {
-                        btn4.setImageResource(R.drawable.cross);
-                        case4.setValeur(npc);
-                    }
-                    else {
-                        btn4.setImageResource(R.drawable.circle);
-                        case4.setValeur(player1);
-                    }
-                }
-            }
-        });
+        jeu.setActivity(this);
 
-        btn5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (case5.isEmpty()){
-                    btn5.setImageResource(R.drawable.cross);
-                    case5.setNotEmpty();
-                    case5.setValeur(player1);
-                }
-                else {
-                    if (case5.getValeur() == player1) {
-                        btn5.setImageResource(R.drawable.cross);
-                        case5.setValeur(npc);
+        for(int i = 0; i<3; i++){
+            for(int j = 0; j<3; j++){
+                int finalIndice_i = i;
+                int finalIndice_j = j;
+                listBtn[i][j].setOnClickListener(new View.OnClickListener(){
+                    @Override
+                    public void onClick(View view) {
+                        jeu.playPlayer(listCase[finalIndice_i][finalIndice_j], listBtn[finalIndice_i][finalIndice_j]);
+                        if (jeu.CheckWin(listCase)){
+                            return;
+                        }
+                        if(!jeu.CheckWin(listCase)) {
+                            jeu.CheckNull();
+                        }
+                        jeu.playAI(listCase, listBtn);
+                        jeu.CheckWin(listCase);
+                        if(!jeu.CheckWin(listCase)) {
+                            jeu.CheckNull();
+                        }
                     }
-                    else {
-                        btn5.setImageResource(R.drawable.circle);
-                        case5.setValeur(player1);
-                    }
-                }
+                });
             }
-        });
-
-        btn6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (case6.isEmpty()){
-                    btn6.setImageResource(R.drawable.cross);
-                    case6.setNotEmpty();
-                    case6.setValeur(player1);
-                }
-                else {
-                    if (case6.getValeur() == player1) {
-                        btn6.setImageResource(R.drawable.cross);
-                        case6.setValeur(npc);
-                    }
-                    else {
-                        btn6.setImageResource(R.drawable.circle);
-                        case6.setValeur(player1);
-                    }
-                }
-            }
-        });
-
-        btn7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (case7.isEmpty()){
-                    btn7.setImageResource(R.drawable.cross);
-                    case7.setNotEmpty();
-                    case7.setValeur(player1);
-                }
-                else {
-                    if (case7.getValeur() == player1) {
-                        btn7.setImageResource(R.drawable.cross);
-                        case7.setValeur(npc);
-                    }
-                    else {
-                        btn7.setImageResource(R.drawable.circle);
-                        case7.setValeur(player1);
-                    }
-                }
-            }
-        });
-
-        btn8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (case8.isEmpty()){
-                    btn8.setImageResource(R.drawable.cross);
-                    case8.setNotEmpty();
-                    case8.setValeur(player1);
-                }
-                else {
-                    if (case8.getValeur() == player1) {
-                        btn8.setImageResource(R.drawable.cross);
-                        case8.setValeur(npc);
-                    }
-                    else {
-                        btn8.setImageResource(R.drawable.circle);
-                        case8.setValeur(player1);
-                    }
-                }
-            }
-        });
-
-        btn9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (case9.isEmpty()){
-                    btn9.setImageResource(R.drawable.cross);
-                    case9.setNotEmpty();
-                    case9.setValeur(player1);
-                }
-                else {
-                    if (case9.getValeur() == player1) {
-                        btn9.setImageResource(R.drawable.cross);
-                        case9.setValeur(npc);
-                    }
-                    else {
-                        btn9.setImageResource(R.drawable.circle);
-                        case9.setValeur(player1);
-                    }
-                }
-            }
-        });
+        }
     }
 
 }

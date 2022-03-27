@@ -30,7 +30,7 @@ public class TossACoinActivity extends AppCompatActivity {
         thisActivity = this;
 
         // initiate a video view
-        this.simpleVideoView = (VideoView) findViewById(R.id.testVideoView);
+        this.simpleVideoView = findViewById(R.id.testVideoView);
 
         tossACoin.setOnClickListener(view -> launchToss());
 
@@ -55,14 +55,16 @@ public class TossACoinActivity extends AppCompatActivity {
     public void launchToss(){
 
         Random r = new Random();
-        int nbRand = r.nextInt(3);
+        int nbRand = r.nextInt(4);
 
         switch (nbRand) {
-            case 0 : this.simpleVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.roll_the_dice));
+            case 0 : this.simpleVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.head_1));
                 break;
-            case 1 : this.simpleVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.dice1));
+            case 1 : this.simpleVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.head_2));
                 break;
-            default : this.simpleVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.dice2));
+            case 2 : this.simpleVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.tails_1));
+                break;
+            default : this.simpleVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.tails_2));
                 break;
         }
         this.simpleVideoView.start(); // start a video
@@ -78,11 +80,7 @@ public class TossACoinActivity extends AppCompatActivity {
                     myPopup.setTitle(getString(R.string.toss_result_tails));
 
                 }
-                myPopup.setPositiveButton(getString(R.string.btnPopUp), new DialogInterface.OnClickListener(){
-                    public void onClick(DialogInterface dialogInterface, int i){
-                        Toast.makeText(getApplicationContext(), "C'est parti !", Toast.LENGTH_SHORT).show();
-                    }
-                });
+                myPopup.setPositiveButton(getString(R.string.btnPopUp), (dialogInterface, i) -> {});
                 myPopup.show();
             }
         });
