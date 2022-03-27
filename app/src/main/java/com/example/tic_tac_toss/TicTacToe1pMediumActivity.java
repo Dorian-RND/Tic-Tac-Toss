@@ -10,7 +10,7 @@ import android.widget.ImageView;
 public class TicTacToe1pMediumActivity extends AppCompatActivity {
 
     private TicTacToe1pMediumActivity activity;
-    protected Jeu1p jeu = new Jeu1p();
+    protected Jeu1pMed jeu = new Jeu1pMed();
     protected CaseTicTacToe case1;
     protected CaseTicTacToe case2;
     protected CaseTicTacToe case3;
