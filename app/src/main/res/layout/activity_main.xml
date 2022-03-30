@@ -145,16 +145,14 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:layout_weight="0.33">
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_weight="0.33">
-
+                <ImageView
+                    android:id="@+id/circleFull"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    app:srcCompat="@android:drawable/radiobutton_on_background"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"/>
 
             </LinearLayout>
 
@@ -163,6 +161,31 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:layout_weight="0.33">
+
+                <ImageView
+                    android:id="@+id/circleEmpty1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    app:srcCompat="@android:drawable/radiobutton_off_background"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="0.33">
+                <ImageView
+                    android:id="@+id/circleEmpty1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    app:srcCompat="@android:drawable/radiobutton_off_background"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"/>
             </LinearLayout>
         </LinearLayout>
 
