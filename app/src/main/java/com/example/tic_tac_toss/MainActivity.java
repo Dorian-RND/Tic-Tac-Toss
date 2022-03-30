@@ -21,8 +21,7 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout layout;
 
     private MainActivity activity;
-
-
+    
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +34,12 @@ public class MainActivity extends AppCompatActivity {
         this.layout = findViewById(R.id.page1Layout);
         this.activity = this;
 
-        AlertDialog.Builder myPopup = new AlertDialog.Builder(activity);
+        AlertDialog.Builder myPopup = new AlertDialog.Builder(activity, R.style.AlertDialogStyle);
         myPopup.setTitle(getString(R.string.TitrePopUp));
         myPopup.setMessage(getString(R.string.TextePopUp));
         myPopup.setPositiveButton(getString(R.string.btnPopUp), new DialogInterface.OnClickListener(){
             public void onClick(DialogInterface dialogInterface, int i){
-                Toast.makeText(getApplicationContext(), "C'est parti !", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), getString(R.string.intro), Toast.LENGTH_SHORT).show();
             }
         });
         myPopup.show();

@@ -1,22 +1,16 @@
 package com.example.tic_tac_toss;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class TicTacToe2pActivity extends AppCompatActivity {
 
     private TicTacToe2pActivity activity;
-    protected Jeu jeu = new Jeu();
+    protected Jeu2P jeu2P = new Jeu2P();
     protected CaseTicTacToe case1;
     protected CaseTicTacToe case2;
     protected CaseTicTacToe case3;
@@ -36,9 +30,6 @@ public class TicTacToe2pActivity extends AppCompatActivity {
     protected ImageView btn7;
     protected ImageView btn8;
     protected ImageView btn9;
-
-    protected int cpt = 0;
-    protected int tour = 1;
 
     CaseTicTacToe[][] listCase = {{case1, case2, case3}, {case4, case5, case6}, {case7, case8, case9}};
     ImageView[][] listBtn = {{btn1, btn2, btn3}, {btn4, btn5, btn6}, {btn7, btn8, btn9}};
@@ -68,7 +59,7 @@ public class TicTacToe2pActivity extends AppCompatActivity {
 
         this.activity = this;
 
-        jeu.setActivity(this);
+        jeu2P.setActivity(this);
 
         for(int indice_i = 0; indice_i<3; indice_i++){
             for(int indice_j = 0; indice_j<3; indice_j++){
@@ -77,10 +68,10 @@ public class TicTacToe2pActivity extends AppCompatActivity {
                 listBtn[indice_i][indice_j].setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View view) {
-                        jeu.play(listCase[finalIndice_i][finalIndice_j], listBtn[finalIndice_i][finalIndice_j]);
-                        jeu.CheckWin(listCase);
-                        if(!jeu.CheckWin(listCase))
-                            jeu.CheckNull();
+                        jeu2P.play(listCase[finalIndice_i][finalIndice_j], listBtn[finalIndice_i][finalIndice_j]);
+                        jeu2P.CheckWin(listCase);
+                        if(!jeu2P.CheckWin(listCase))
+                            jeu2P.CheckNull();
                     }
                 });
             }

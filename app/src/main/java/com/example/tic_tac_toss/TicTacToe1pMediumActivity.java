@@ -31,8 +31,6 @@ public class TicTacToe1pMediumActivity extends AppCompatActivity {
     protected ImageView btn8;
     protected ImageView btn9;
 
-    protected int cpt = 0;
-    protected int tour = 1;
 
     CaseTicTacToe[][] listCase = {{case1, case2, case3}, {case4, case5, case6}, {case7, case8, case9}};
     ImageView[][] listBtn = {{btn1, btn2, btn3}, {btn4, btn5, btn6}, {btn7, btn8, btn9}};

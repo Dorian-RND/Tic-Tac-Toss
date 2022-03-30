@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Tic-Tac-Toss</string>
-    <string name="myTest0" id="@+id/myTest0">C est un test</string>
+    <string name="btnTicTacToe_1p_Easy" id="@+id/btnTicTacToss_1p_Easy">1 Joueur - Facile</string>
+    <string name="btnTicTacToe_1p_Medium" id="@+id/btnTicTacToss_1p_Medium">1 Joueur - Moyen</string>
+    <string name="btnTicTacToe_2p" id="@+id/btnTicTacToss_2p">Joueur vs Joueur</string>
+    <string name="btnTossACoin" id="@+id/btnTossACoin">Lancer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="TicTacToss" id="@+id/TicTacToss">Morpion</string>
+    <string name="TossACoin" id="@+id/TossACoin">Pile ou Face</string>
+    <string name="Credits" id="@+id/Credits">Crédits</string>
+    <string name="TitrePopUp" id="@+id/TitrePopUp">BIENVENUE !</string>
+    <string name="btnPopUp" id="@+id/btnPopUp">OK !</string>
+    <string name="result_txt" id="@+id/txtResult">RESULTAT </string>
+    <string name="toss_result_heads" id="@+id/tossHeads">Face ! </string>
+    <string name="toss_result_tails" id="@+id/tossTails">Pile ! </string>
+    <string name="intro" id="@+id/intro">C\'est parti !</string>
+    <string name="win_AI" id="@+id/win_AI">C\'est perdu :(</string>
+    <string name="win_player" id="@+id/win_player">C\'est gagné !!!</string>
+    <string name="win_player1" id="@+id/win_player1">Le joueur 1 a gagné !!!</string>
+    <string name="win_player2" id="@+id/win_player2">Le joueur 2 à gagné !!!</string>
+    <string name="draw" id="@+id/draw">Égalité !!!</string>
+    <string name="home" id="@+id/home">Accueil</string>
+    <string name="play_again" id="@+id/play_again">Rejouer</string>
+    <string name="TextePopUp" id="@+id/TextePopUp">\nCette application comporte un morpion et un Pile ou face.\n\nLa navigation se fait par glissement vers la gauche et vers la droite.\n</string>
+    <string name="credits" id="@+id/credits">\n\n\nMerci d\'avoir tester notre application.\n\nCette application a été réalisée dans le cadre d\'un projet universitaire par deux étudiants de l\'Université du Mans.\n\nPour nous contacter : Dorian_Renard.Etu@univ-lemans.fr\tClement.Mainguy.Etu@univ-lemans.fr  </string>
 </resources>

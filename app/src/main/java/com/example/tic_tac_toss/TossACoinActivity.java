@@ -2,6 +2,7 @@ package com.example.tic_tac_toss;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -15,7 +16,7 @@ import java.util.Random;
 
 public class TossACoinActivity extends AppCompatActivity {
 
-    Button tossACoin;
+    private Button tossACoin;
     LinearLayout layout;
     private VideoView simpleVideoView;
     private Activity thisActivity;
@@ -72,7 +73,7 @@ public class TossACoinActivity extends AppCompatActivity {
         simpleVideoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mediaPlayer) {
-                AlertDialog.Builder myPopup = new AlertDialog.Builder(thisActivity);
+                AlertDialog.Builder myPopup = new AlertDialog.Builder(thisActivity, R.style.AlertDialogStyle);
                 if (nbRand == 0 || nbRand == 1){
                     myPopup.setTitle(getString(R.string.toss_result_heads));
                 }

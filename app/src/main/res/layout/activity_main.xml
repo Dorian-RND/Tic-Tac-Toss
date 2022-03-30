@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <LinearLayout
         android:layout_width="415dp"
         android:layout_height="730dp"
@@ -27,7 +28,8 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:background="@color/black">
+            android:background="@color/black"
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -88,14 +90,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_weight="0.50">
+                android:layout_weight="0.40">
 
                 <Button
                     android:id="@+id/btnTicTacToss_1p_Easy"
                     android:layout_width="300dp"
                     android:layout_height="75dp"
                     android:text="@string/btnTicTacToe_1p_Easy"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="50dp"
                     android:layout_gravity="center"
                     android:background="@drawable/arrondi_btn" />
             </LinearLayout>
@@ -105,18 +107,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_weight="0.40">
+                android:layout_weight="0.50">
 
                 <Button
                     android:id="@+id/btnTicTacToss_1p_Medium"
                     android:layout_width="300dp"
                     android:layout_height="75dp"
                     android:text="@string/btnTicTacToe_1p_Medium"
-                    android:layout_marginTop="60dp"
+                    android:layout_marginTop="0dp"
                     android:layout_gravity="center"
                     android:background="@drawable/arrondi_btn" />
             </LinearLayout>
-
         </LinearLayout>
 
         <LinearLayout
@@ -145,14 +146,7 @@
                 android:orientation="horizontal"
                 android:layout_weight="0.33">
 
-                <ImageView
-                    android:id="@+id/circleFull"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    app:srcCompat="@android:drawable/radiobutton_on_background"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="25dp"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -161,14 +155,7 @@
                 android:orientation="horizontal"
                 android:layout_weight="0.33">
 
-                <ImageView
-                    android:id="@+id/circleEmpty1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    app:srcCompat="@android:drawable/radiobutton_off_background"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="25dp" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -176,15 +163,6 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:layout_weight="0.33">
-
-                <ImageView
-                    android:id="@+id/circleEmpty2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    app:srcCompat="@android:drawable/radiobutton_off_background"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="25dp"/>
             </LinearLayout>
         </LinearLayout>
 

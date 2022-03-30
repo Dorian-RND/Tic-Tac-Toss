@@ -71,16 +71,16 @@ public class Jeu1p {
         CheckDiagonale(listCase);
 
         if(winP1){
-            AlertDialog.Builder myPopup = new AlertDialog.Builder(activity);
+            AlertDialog.Builder myPopup = new AlertDialog.Builder(activity, R.style.AlertDialogStyle);
             myPopup.setTitle(R.string.win_player);
-            myPopup.setPositiveButton("Accueil", new DialogInterface.OnClickListener() {
+            myPopup.setPositiveButton(R.string.home, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialogInterface, int i) {
                     Intent accueil = new Intent(activity.getApplicationContext(), TicTacToeActivity.class);
                     accueil.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     activity.startActivity(accueil);
                     activity.finish();
                 }
-            }).setNegativeButton("Rejouer", new DialogInterface.OnClickListener() {
+            }).setNegativeButton(R.string.play_again, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialogInterface, int i) {
                     Intent rejouer = new Intent(activity.getApplicationContext(), TicTacToe1pEasyActivity.class);
                     rejouer.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -93,16 +93,16 @@ public class Jeu1p {
         }
 
         else if(winP2){
-            AlertDialog.Builder myPopup = new AlertDialog.Builder(activity);
+            AlertDialog.Builder myPopup = new AlertDialog.Builder(activity, R.style.AlertDialogStyle);
             myPopup.setTitle(R.string.win_AI);
-            myPopup.setPositiveButton("Accueil", new DialogInterface.OnClickListener() {
+            myPopup.setPositiveButton(R.string.home, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialogInterface, int i) {
                     Intent accueil = new Intent(activity.getApplicationContext(), TicTacToeActivity.class);
                     accueil.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     activity.startActivity(accueil);
                     activity.finish();
                 }
-            }).setNegativeButton("Rejouer", new DialogInterface.OnClickListener() {
+            }).setNegativeButton(R.string.play_again, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialogInterface, int i) {
                     Intent rejouer = new Intent(activity.getApplicationContext(), TicTacToe1pEasyActivity.class);
                     rejouer.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -120,7 +120,7 @@ public class Jeu1p {
 
     public void CheckNull(){
         if(cpt == 9 && (!winP1 || !winP2)){
-            AlertDialog.Builder myPopup = new AlertDialog.Builder(activity);
+            AlertDialog.Builder myPopup = new AlertDialog.Builder(activity, R.style.AlertDialogStyle);
             myPopup.setTitle(R.string.draw);
             myPopup.setPositiveButton(R.string.home, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialogInterface, int i) {
