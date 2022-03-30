@@ -29,25 +29,25 @@ public class Jeu1pMed {
         this.activity = activity1;
     }
 
-    public void CheckLigne(CaseTicTacToe[][] listCase){
+    public void CheckLine(CaseTicTacToe[][] listCase){
         int j = 0;
         for(int i=0; i<3; i++){
-            if((listCase[i][j].getValeur() == 1) && (listCase[i][j+1].getValeur() == 1) && listCase[i][j+2].getValeur()==1){
+            if((listCase[i][j].getValue() == 1) && (listCase[i][j+1].getValue() == 1) && listCase[i][j+2].getValue()==1){
                 winP1 = true;
             }
-            if((listCase[i][j].getValeur() == 2) && (listCase[i][j+1].getValeur() == 2) && listCase[i][j+2].getValeur()==2){
+            if((listCase[i][j].getValue() == 2) && (listCase[i][j+1].getValue() == 2) && listCase[i][j+2].getValue()==2){
                 winP2 = true;
             }
         }
     }
 
-    public void CheckColonne(CaseTicTacToe[][] listCase){
+    public void CheckRow(CaseTicTacToe[][] listCase){
         int i = 0;
         for(int j=0; j<3; j++){
-            if((listCase[i][j].getValeur() == 1) && (listCase[i+1][j].getValeur() == 1) && listCase[i+2][j].getValeur()==1){
+            if((listCase[i][j].getValue() == 1) && (listCase[i+1][j].getValue() == 1) && listCase[i+2][j].getValue()==1){
                 winP1 = true;
             }
-            if((listCase[i][j].getValeur() == 2) && (listCase[i+1][j].getValeur() == 2) && listCase[i+2][j].getValeur()==2){
+            if((listCase[i][j].getValue() == 2) && (listCase[i+1][j].getValue() == 2) && listCase[i+2][j].getValue()==2){
                 winP2 = true;
             }
         }
@@ -57,17 +57,17 @@ public class Jeu1pMed {
         int i = 0;
         int j1 = 0;
         int j2 = 2;
-        if(((listCase[i][j1].getValeur() == 1) && (listCase[i+1][j1+1].getValeur() == 1) && (listCase[i+2][j2].getValeur()==1)) || ((listCase[i][j2].getValeur() == 1) && (listCase[i+1][j1+1].getValeur() == 1) && (listCase[i+2][j1].getValeur()==1))){
+        if(((listCase[i][j1].getValue() == 1) && (listCase[i+1][j1+1].getValue() == 1) && (listCase[i+2][j2].getValue()==1)) || ((listCase[i][j2].getValue() == 1) && (listCase[i+1][j1+1].getValue() == 1) && (listCase[i+2][j1].getValue()==1))){
             winP1 = true;
         }
-        if(((listCase[i][j1].getValeur() == 2) && (listCase[i+1][j1+1].getValeur() == 2) && (listCase[i+2][j2].getValeur()==2)) || ((listCase[i][j2].getValeur() == 2) && (listCase[i+1][j1+1].getValeur() == 2) && (listCase[i+2][j1].getValeur()==2))){
+        if(((listCase[i][j1].getValue() == 2) && (listCase[i+1][j1+1].getValue() == 2) && (listCase[i+2][j2].getValue()==2)) || ((listCase[i][j2].getValue() == 2) && (listCase[i+1][j1+1].getValue() == 2) && (listCase[i+2][j1].getValue()==2))){
             winP2 = true;
         }
     }
 
     public boolean CheckWin(CaseTicTacToe[][] listCase){
-        CheckLigne(listCase);
-        CheckColonne(listCase);
+        CheckLine(listCase);
+        CheckRow(listCase);
         CheckDiagonale(listCase);
 
         if(winP1){
@@ -145,13 +145,13 @@ public class Jeu1pMed {
         int i;
 
         for (i=0; i < 3; i++){
-            if (grid[i][0].getValeur() == player && grid[i][1].getValeur() == player && grid[i][2].getValeur() == 0){
+            if (grid[i][0].getValue() == player && grid[i][1].getValue() == player && grid[i][2].getValue() == 0){
                 return i*3+3;
             }
-            else if (grid[i][0].getValeur() == player && grid[i][1].getValeur() == 0 && grid[i][2].getValeur() == player){
+            else if (grid[i][0].getValue() == player && grid[i][1].getValue() == 0 && grid[i][2].getValue() == player){
                 return i*3+2;
             }
-            else if (grid[i][0].getValeur() == 0 && grid[i][1].getValeur() == player && grid[i][2].getValeur() == player){
+            else if (grid[i][0].getValue() == 0 && grid[i][1].getValue() == player && grid[i][2].getValue() == player){
                 return i*3+1;
             }
         }
@@ -162,13 +162,13 @@ public class Jeu1pMed {
         int i;
 
         for (i=0; i < 3; i++){
-            if (grid[0][i].getValeur() == player && grid[1][i].getValeur() == player && grid[2][i].getValeur() == 0){
+            if (grid[0][i].getValue() == player && grid[1][i].getValue() == player && grid[2][i].getValue() == 0){
                 return 7+i;
             }
-            else if (grid[0][i].getValeur() == player && grid[1][i].getValeur() == 0 && grid[2][i].getValeur() == player){
+            else if (grid[0][i].getValue() == player && grid[1][i].getValue() == 0 && grid[2][i].getValue() == player){
                 return 4+i;
             }
-            else if (grid[0][i].getValeur() == 0 && grid[1][i].getValeur() == player && grid[2][i].getValeur() == player){
+            else if (grid[0][i].getValue() == 0 && grid[1][i].getValue() == player && grid[2][i].getValue() == player){
                 return 1+i;
             }
         }
@@ -176,17 +176,17 @@ public class Jeu1pMed {
     }
 
     public int canWinDiag(CaseTicTacToe[][] grid, int player){
-        if (grid[0][0].getValeur() == player && grid[1][1].getValeur() == player && grid[2][2].getValeur() == 0)
+        if (grid[0][0].getValue() == player && grid[1][1].getValue() == player && grid[2][2].getValue() == 0)
             return 9;
-        else if (grid[0][0].getValeur() == player && grid[1][1].getValeur() == 0 && grid[2][2].getValeur() == player)
+        else if (grid[0][0].getValue() == player && grid[1][1].getValue() == 0 && grid[2][2].getValue() == player)
             return 5;
-        else if (grid[0][0].getValeur() == 0 && grid[1][1].getValeur() == player && grid[2][2].getValeur() == player)
+        else if (grid[0][0].getValue() == 0 && grid[1][1].getValue() == player && grid[2][2].getValue() == player)
             return 1;
-        else if (grid[0][2].getValeur() == player && grid[1][1].getValeur() == player && grid[2][0].getValeur() == 0)
+        else if (grid[0][2].getValue() == player && grid[1][1].getValue() == player && grid[2][0].getValue() == 0)
             return 7;
-        else if (grid[0][2].getValeur() == player && grid[1][1].getValeur() == 0 && grid[2][0].getValeur() == player)
+        else if (grid[0][2].getValue() == player && grid[1][1].getValue() == 0 && grid[2][0].getValue() == player)
             return 5;
-        else if (grid[0][2].getValeur() == 0 && grid[1][1].getValeur() == player && grid[2][0].getValeur() == player)
+        else if (grid[0][2].getValue() == 0 && grid[1][1].getValue() == player && grid[2][0].getValue() == player)
             return 3;
         else
             return 0;
@@ -220,7 +220,7 @@ public class Jeu1pMed {
             numRow =  num % nbCase;
             cpt++;
             gridBtn[numLine][numRow].setImageResource(R.drawable.circle);
-            gridCase[numLine][numRow].setValeur(2);
+            gridCase[numLine][numRow].setValue(2);
             tour = 1;
         }
         else {
@@ -231,38 +231,38 @@ public class Jeu1pMed {
                 numRow =  num % nbCase;
                 cpt++;
                 gridBtn[numLine][numRow].setImageResource(R.drawable.circle);
-                gridCase[numLine][numRow].setValeur(2);
+                gridCase[numLine][numRow].setValue(2);
                 tour = 1;
             }
             else {
-                if (gridCase[0][2].getValeur() == 0){
+                if (gridCase[0][2].getValue() == 0){
                     cpt++;
                     gridBtn[0][2].setImageResource(R.drawable.circle);
-                    gridCase[0][2].setValeur(2);
+                    gridCase[0][2].setValue(2);
                     tour = 1;
                 }
-                else if (gridCase[1][1].getValeur() == 0){
+                else if (gridCase[1][1].getValue() == 0){
                     cpt++;
                     gridBtn[1][1].setImageResource(R.drawable.circle);
-                    gridCase[1][1].setValeur(2);
+                    gridCase[1][1].setValue(2);
                     tour = 1;
                 }
-                else if (gridCase[2][2].getValeur() == 0){
+                else if (gridCase[2][2].getValue() == 0){
                     cpt++;
                     gridBtn[2][2].setImageResource(R.drawable.circle);
-                    gridCase[2][2].setValeur(2);
+                    gridCase[2][2].setValue(2);
                     tour = 1;
                 }
-                else if (gridCase[0][0].getValeur() == 0){
+                else if (gridCase[0][0].getValue() == 0){
                     cpt++;
                     gridBtn[0][0].setImageResource(R.drawable.circle);
-                    gridCase[0][0].setValeur(2);
+                    gridCase[0][0].setValue(2);
                     tour = 1;
                 }
-                else if (gridCase[2][0].getValeur() == 0){
+                else if (gridCase[2][0].getValue() == 0){
                     cpt++;
                     gridBtn[2][0].setImageResource(R.drawable.circle);
-                    gridCase[2][0].setValeur(2);
+                    gridCase[2][0].setValue(2);
                     tour = 1;
                 }
                 // can not hapend but to make code clearer
@@ -275,7 +275,7 @@ public class Jeu1pMed {
                             if (gridCase[i][j].isEmpty()) {
                                 cpt++;
                                 gridBtn[i][j].setImageResource(R.drawable.circle);
-                                gridCase[i][j].setValeur(2);
+                                gridCase[i][j].setValue(2);
                                 tour = 1;
                                 return;
                             }
@@ -293,7 +293,7 @@ public class Jeu1pMed {
                     cpt++;
                     btn.setImageResource(R.drawable.cross);
                     cases.setNotEmpty();
-                    cases.setValeur(1);
+                    cases.setValue(1);
                     tour = 2;
                 }
             }

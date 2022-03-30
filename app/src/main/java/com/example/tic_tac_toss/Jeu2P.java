@@ -29,25 +29,25 @@ public class Jeu2P {
         this.activity = activity1;
     }
 
-    public void CheckLigne(CaseTicTacToe[][] listCase){
+    public void CheckLine(CaseTicTacToe[][] listCase){
         int j = 0;
         for(int i=0; i<3; i++){
-            if((listCase[i][j].getValeur() == 1) && (listCase[i][j+1].getValeur() == 1) && listCase[i][j+2].getValeur()==1){
+            if((listCase[i][j].getValue() == 1) && (listCase[i][j+1].getValue() == 1) && listCase[i][j+2].getValue()==1){
                 winP1 = true;
             }
-            if((listCase[i][j].getValeur() == 2) && (listCase[i][j+1].getValeur() == 2) && listCase[i][j+2].getValeur()==2){
+            if((listCase[i][j].getValue() == 2) && (listCase[i][j+1].getValue() == 2) && listCase[i][j+2].getValue()==2){
                 winP2 = true;
             }
         }
     }
 
-    public void CheckColonne(CaseTicTacToe[][] listCase){
+    public void CheckRow(CaseTicTacToe[][] listCase){
         int i = 0;
         for(int j=0; j<3; j++){
-            if((listCase[i][j].getValeur() == 1) && (listCase[i+1][j].getValeur() == 1) && listCase[i+2][j].getValeur()==1){
+            if((listCase[i][j].getValue() == 1) && (listCase[i+1][j].getValue() == 1) && listCase[i+2][j].getValue()==1){
                 winP1 = true;
             }
-            if((listCase[i][j].getValeur() == 2) && (listCase[i+1][j].getValeur() == 2) && listCase[i+2][j].getValeur()==2){
+            if((listCase[i][j].getValue() == 2) && (listCase[i+1][j].getValue() == 2) && listCase[i+2][j].getValue()==2){
                 winP2 = true;
             }
         }
@@ -57,17 +57,17 @@ public class Jeu2P {
         int i = 0;
         int j1 = 0;
         int j2 = 2;
-        if(((listCase[i][j1].getValeur() == 1) && (listCase[i+1][j1+1].getValeur() == 1) && (listCase[i+2][j2].getValeur()==1)) || ((listCase[i][j2].getValeur() == 1) && (listCase[i+1][j1+1].getValeur() == 1) && (listCase[i+2][j1].getValeur()==1))){
+        if(((listCase[i][j1].getValue() == 1) && (listCase[i+1][j1+1].getValue() == 1) && (listCase[i+2][j2].getValue()==1)) || ((listCase[i][j2].getValue() == 1) && (listCase[i+1][j1+1].getValue() == 1) && (listCase[i+2][j1].getValue()==1))){
             winP1 = true;
         }
-        if(((listCase[i][j1].getValeur() == 2) && (listCase[i+1][j1+1].getValeur() == 2) && (listCase[i+2][j2].getValeur()==2)) || ((listCase[i][j2].getValeur() == 2) && (listCase[i+1][j1+1].getValeur() == 2) && (listCase[i+2][j1].getValeur()==2))){
+        if(((listCase[i][j1].getValue() == 2) && (listCase[i+1][j1+1].getValue() == 2) && (listCase[i+2][j2].getValue()==2)) || ((listCase[i][j2].getValue() == 2) && (listCase[i+1][j1+1].getValue() == 2) && (listCase[i+2][j1].getValue()==2))){
             winP2 = true;
         }
     }
 
     public boolean CheckWin(CaseTicTacToe[][] listCase){
-        CheckLigne(listCase);
-        CheckColonne(listCase);
+        CheckLine(listCase);
+        CheckRow(listCase);
         CheckDiagonale(listCase);
 
         if(winP1){
@@ -148,14 +148,14 @@ public class Jeu2P {
                     cpt++;
                     btn.setImageResource(R.drawable.cross);
                     cases.setNotEmpty();
-                    cases.setValeur(1);
+                    cases.setValue(1);
                     tour = 2;
                 }
                 else if(cases.isEmpty() && tour==2){
                     cpt++;
                     btn.setImageResource(R.drawable.circle);
                     cases.setNotEmpty();
-                    cases.setValeur(2);
+                    cases.setValue(2);
                     tour = 1;
                 }
             }
