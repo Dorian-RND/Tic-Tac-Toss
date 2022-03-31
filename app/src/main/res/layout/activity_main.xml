@@ -179,7 +179,7 @@
                 android:orientation="horizontal"
                 android:layout_weight="0.33">
                 <ImageView
-                    android:id="@+id/circleEmpty1"
+                    android:id="@+id/circleEmpty2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
